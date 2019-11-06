@@ -18,7 +18,15 @@ division by zero, so I can "test" it when I get to that.
 
 In order to use the API, you must send **POST** `/{operand}` where the
 operand is one of the following:
+
     - add
     - subtract
     - multiply
     - divide
+
+### Web Page Interaction
+
+I also added some *limited* web page interaction while the API
+is running. The base path will present a menu, of sorts, which
+will guide to the function page. The function page will act as
+a small interface to interact with the API
