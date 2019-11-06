@@ -1,0 +1,28 @@
+{
+  "name": "my-calc",
+  "version": "1.0.0",
+  "description": "Calculator API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Steven Zilberberg",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "morton": "^1.0.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/srz2/nodejs-calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/srz2/nodejs-calculator/issues"
+  },
+  "homepage": "https://github.com/srz2/nodejs-calculator#readme"
+}
