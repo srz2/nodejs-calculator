@@ -4,6 +4,7 @@
   "description": "Calculator API",
   "main": "app.js",
   "scripts": {
+    "preinstall": "cp .env_sample .env",
     "test": "mocha",
     "start": "node server.js"
   },
