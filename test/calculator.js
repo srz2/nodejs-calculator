@@ -76,4 +76,21 @@ describe('Calculator Logic', function() {
             chai.assert.equal(result, Infinity, 'Division Fails');
         });
     });
+
+    describe('Exponent Calculation', function() {
+        it('Raise a number to a power', function() {
+            const result = calc.power(2, 16);
+            chai.assert.equal(result, 65536, "Exponent Fails")
+        });
+
+        it('Raise a number to a power of zero', function() {
+            const result = calc.power(2, 0);
+            chai.assert.equal(result, 1, "Exponent Fails")
+        });
+
+        it('Raise a number to a power of 1', function() {
+            const result = calc.power(2, 1);
+            chai.assert.equal(result, 2, "Exponent Fails")
+        });
+    });
 });

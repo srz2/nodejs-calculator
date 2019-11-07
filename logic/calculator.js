@@ -13,3 +13,7 @@ module.exports.multiply = function multiply(x, y) {
 module.exports.divide = function divide(x, y) {
     return x / y
 }
+
+module.exports.power = function power(x, y) {
+    return Math.pow(x, y);
+}

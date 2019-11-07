@@ -7,6 +7,7 @@ const routeAdd = require('./routes/add');
 const routeSub = require('./routes/sub');
 const routeMul = require('./routes/multiply');
 const routeDiv = require('./routes/divide');
+const routePow = require('./routes/pow');
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use('/add', routeAdd);
 app.use('/subtract', routeSub);
 app.use('/multiply', routeMul);
 app.use('/divide', routeDiv);
+app.use('/pow', routePow);
 
 // Catch All Routes - Present Main Page
 app.use((req, res, next) => {
