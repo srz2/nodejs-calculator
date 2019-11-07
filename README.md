@@ -8,7 +8,11 @@ This is a simple calculator API for me to practice NodeJS and play around.
 ## Setting Up the API
 There is a `.env_sample` file which should be filled out and
 renamed to `.env`. This will feed proper enviornment variables to
-start the api
+start the api.
+
+After cloning down the project simply running install command should set you up
+
+    npm install
 
 ## Using the API
 
