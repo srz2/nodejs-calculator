@@ -25,6 +25,7 @@ operand is one of the following:
     - subtract
     - multiply
     - divide
+    - exponent
 
 ### Web Page Interaction
 
@@ -32,3 +33,7 @@ I also added some *limited* web page interaction while the API
 is running. The base path will present a menu, of sorts, which
 will guide to the function page. The function page will act as
 a small interface to interact with the API
+
+## Website Link
+
+[Live Web App](https://srz2-calculator-api.herokuapp.com/)
