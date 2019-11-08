@@ -14,7 +14,7 @@ const app = express();
 // Enable Logging
 app.use(log('dev'));
 
-// Declare a public folder for serving CSS
+// Declare a public folder for serving CSS and JS
 app.use(express.static('public'));
 
 // Enable EJS as the render
@@ -25,6 +25,22 @@ app.use(parser.urlencoded({
     extended: false
 }));
 app.use(parser.json());
+
+// CORS Error Handling
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    );
+    if (req.method === 'OPTIONS'){
+        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE');
+        return res.status(200).json({
+
+        });
+    }
+    next();
+});
 
 app.use('/add', routeAdd);
 app.use('/subtract', routeSub);

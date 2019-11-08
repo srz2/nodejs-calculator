@@ -4,7 +4,7 @@ const router = express.Router();
 const controllerSub = require('../controllers/sub');
 
 router.get('/', (req, res, next) => {
-    res.render('function', { functionName: 'Subtract' });
+    res.render('function', { functionName: 'Subtract', operation: 'sub' });
 });
 
 router.post('/', controllerSub.subtract);

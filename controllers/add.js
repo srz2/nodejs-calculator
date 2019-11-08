@@ -4,17 +4,27 @@ const router = express.Router();
 
 module.exports.add = (req, res, next) => {
     const val1 = parseInt(req.body.num1);
-    const val2 = parseInt(req.body.num2);
-    const val3 = calculator.addition(val1, val2);
-
-    res.status(200).json({
-        message: "Added numbers together",
-        input: {
-            number1: val1,
-            number2: val2
-        },
-        output: {
-            resultant: val3
-        }
-    })
+    const val2 = parseInt(req.body.num2);    
+    
+    if (isNaN(val1) || isNaN(val2)){
+        res.status(500).json({
+            message: "Numbers must be defined",
+            input: {
+                number1: val1,
+                number2: val2
+            }
+        })
+    } else {
+        const val3 = calculator.addition(val1, val2);
+        res.status(200).json({
+            message: "Added numbers together",
+            input: {
+                number1: val1,
+                number2: val2
+            },
+            output: {
+                resultant: val3
+            }
+        });
+    }
 };

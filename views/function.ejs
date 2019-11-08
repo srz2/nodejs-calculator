@@ -8,15 +8,19 @@
         <% include ./partials/forkme %>
         <h1>Lets get ready to <%= (functionName == 'Power' ? 'use Exponents' : functionName) %></h1>
 
-        <form action="" method="post">
+        <form action="#" onsubmit="api_<%= operation %>(); return false;">
             <label>Number 1:</label>
             <input type="number" name="num1" id="num1">
             <label>Number 2:</label>
             <input type="number" name="num2" id="num2">
             <button type="submit">Submit</button>
         </form>
+        <p id="lblStatus">What happened:</p>
+        <p id="lblAnswer">Answer:</p>
         <footer>
             <p>Go back to the welcome page: <a href="/">HERE</a></p>
-        </footer>
+        </footer>        
+
+        <script src="./js/calculator.js"></script>
     </body>
 </html>
