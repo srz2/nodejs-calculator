@@ -2,7 +2,7 @@
   "name": "my-calc",
   "version": "1.0.0",
   "description": "Calculator API",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "preinstall": "cp .env_sample .env",
     "test": "mocha",
