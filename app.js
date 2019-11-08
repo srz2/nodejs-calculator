@@ -14,7 +14,7 @@ const app = express();
 // Enable Logging
 app.use(log('dev'));
 
-// Declare a public folder for serving CSS
+// Declare a public folder for serving CSS and JS
 app.use(express.static('public'));
 
 // Enable EJS as the render
