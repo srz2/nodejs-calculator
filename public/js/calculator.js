@@ -4,13 +4,12 @@ var lblStatus = document.getElementById("lblStatus");
 var lblAnswer = document.getElementById("lblAnswer");
 
 // Create host name with port number
-var sz_Host = 'https://' + location.host;
+var sz_Host = location.protocol + "//" + location.host;
 if (sz_Host.includes(':')){
     sz_Host += '/';
 } else {
     sz_Host += ':' + location.port + '/';
 }
-
 
 function api_send(operation, x, y) {
     var request = new XMLHttpRequest();
