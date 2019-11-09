@@ -19,9 +19,8 @@ function api_send(operation, x, y) {
     request.setRequestHeader('Content-Type', 'application/json');
 
     request.onreadystatechange = function() {
-        
+        // Only evaluate if form is done        
         if (this.readyState != 4) return;
-
 
         console.log("Received: " + this.responseText);
         var data = JSON.parse(this.responseText);
