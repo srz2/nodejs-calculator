@@ -2,7 +2,15 @@ var txtNum1 = document.getElementById("num1");
 var txtNum2 = document.getElementById("num2");
 var lblStatus = document.getElementById("lblStatus");
 var lblAnswer = document.getElementById("lblAnswer");
-var sz_Host = 'http://' + location.host + '/';
+
+// Create host name with port number
+var sz_Host = 'http://' + location.host;
+if (sz_Host.includes(':')){
+    sz_Host += '/';
+} else {
+    sz_Host += ':' + location.port + '/';
+}
+
 
 function api_send(operation, x, y) {
     var request = new XMLHttpRequest();
