@@ -2,10 +2,13 @@ var txtNum1 = document.getElementById("num1");
 var txtNum2 = document.getElementById("num2");
 var lblStatus = document.getElementById("lblStatus");
 var lblAnswer = document.getElementById("lblAnswer");
+var sz_Host = 'http://' + location.host + '/';
 
 function api_send(operation, x, y) {
     var request = new XMLHttpRequest();
-    request.open('POST', 'http://localhost:' + location.port + '/' + operation, true);
+    var sz_URL =  sz_Host + operation;
+    console.log('Configured Send: ' + sz_URL);
+    request.open('POST', sz_URL, true);
     request.setRequestHeader('Content-Type', 'application/json');
 
     request.onreadystatechange = function() {
