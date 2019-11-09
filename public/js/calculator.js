@@ -4,7 +4,7 @@ var lblStatus = document.getElementById("lblStatus");
 var lblAnswer = document.getElementById("lblAnswer");
 
 // Create host name with port number
-var sz_Host = 'http://' + location.host;
+var sz_Host = 'https://' + location.host;
 if (sz_Host.includes(':')){
     sz_Host += '/';
 } else {
