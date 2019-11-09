@@ -52,6 +52,11 @@ function api_sub() {
 function api_divide() {
     const x = txtNum1.value;
     const y = txtNum2.value;
+    if (y === '0'){
+        lblStatus.innerHTML = "What happened: <b style=\"color: red;\">You cannot divide by zero</b>";
+        lblAnswer.innerHTML = "Answer: Did not calculate";
+        return;
+    }
     api_send('divide', x, y);
 }
 
