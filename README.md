@@ -3,6 +3,8 @@ NodeJS Calculator
 
 [![Build Status](https://travis-ci.org/srz2/nodejs-calculator.svg?branch=master)](https://travis-ci.org/srz2/nodejs-calculator)
 
+[![codecov](https://codecov.io/gh/srz2/nodejs-calculator/branch/master/graph/badge.svg)](https://codecov.io/gh/srz2/nodejs-calculator)
+
 This is a simple calculator API for me to practice NodeJS and play around.
 
 ## Setting Up the API
